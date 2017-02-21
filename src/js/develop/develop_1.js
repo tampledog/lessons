@@ -11,15 +11,21 @@ $(document).ready(function(){
         $(this).addClass('active');
 
     });
+
+    $('.plus').click(function () {
+        if ($(this).closest('li').hasClass('active')) {
+        $(this).closest('li').removeClass('active');
+            $(this).closest('li').find('.cont').slideUp();
+        } else {
+            $(this).closest('li').addClass('active');
+            $(this).closest('li').find('.cont').slideDown();
+        }
+    });
 });
 
 $(window).load(function(){
 
-    $('.plus').click(function () {
-        $('li').removeClass('active');
-        $(this).closest('li').addClass('active');
-        $(this).closest('.content').addClass('active');
-    });
+
 });
 
 $(window).resize(function(){
