@@ -1,6 +1,10 @@
 .tabs { display: flex;
   ul {display: flex; padding: 0; margin: 0;   justify-content: flex-start;}
-  .tab {width: 200px; height: 50px; background-color: #0088CC; border: 1px solid black; display: flex; align-items: center; justify-content: center;
+  .tab {  background-color: rgb(194, 194, 194);
+    left: 145px;
+    top: 253px;
+    width: 211px;
+    height: 55px; border: 1px solid black; display: flex; align-items: center; justify-content: center;
     &.active{
       background-color: red;}
   }
@@ -26,11 +30,11 @@
     align-items: center; border: 1px solid black;
     &.active{
       .plus {
-        &:after {transform: rotate(0deg);}
+        &:after {transform: rotate(180deg);}
       }
 
        }
-    .text {height: 40px; border: 1px solid black; width: 100%; display: flex; justify-content: center; align-items: center;}
+    .text {height: 40px; border: 1px solid black; width: 100%; display: flex; justify-content: center; align-items: center;  }
     }
 
 
@@ -49,6 +53,8 @@
     }
   }
   .cont {
+    padding: 15px 15px 15px 30px;
+    text-align: justify;
     display: none;
     }
 }
@@ -62,5 +68,71 @@
 
 .butt:hover {color: rebeccapurple;
   transition: color 200ms ease-out 50ms;}
+
+.menu {
+  ul {display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    li {border-left: 1px solid black;
+
+      text-align: center;
+      line-height: 35px;
+      background-color: #F1F1F1;
+      cursor: pointer;
+      width: 20%;
+      div {display: none;}
+      &.act>div {display: flex; justify-content: space-around;}
+    }
+    li:last-child {border-right: 1px solid black;}
+  }
+}
+
+
+#menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  li {
+    list-style: none;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    text-align: center;
+    background:  #95DF8E;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 150px;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 40px;
+
+      li{
+        float: none;
+        height: 30px;
+        margin: 0;
+        width: 150px;
+        text-align: center;
+        background: #95DF8E;
+      }
+    }
+  }
+}
+
+
+
 
 
