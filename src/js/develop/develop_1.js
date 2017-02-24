@@ -22,14 +22,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#menu li').mouseenter(function () {
-        $(this).addClass('act');
-        $(this).children().slideDown();
-    });
-    $('#menu li').mouseleave(function () {
-        $(this).removeClass('act');
-        $(this).children().slideUp();
-    });
+
 });
 
 $(window).load(function(){
