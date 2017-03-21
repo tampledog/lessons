@@ -69,41 +69,7 @@
 .butt:hover {color: rebeccapurple;
   transition: color 200ms ease-out 50ms;}
 
-.menu {
-  ul {display: flex; margin: 0; padding: 0; justify-content: space-around; align-items: center; list-style-type: none;
-    ul li {padding-top: 2px;}
-    li { width:20%; display: flex; align-content: space-around; text-align: center; position: relative;
-        &:hover {
-        ul {display: block;  position: absolute; top: 35px;
-          li {width: 180px;}
-        }
-      }
-      ul {display: none;
-        li:last-child { border-right: none;
-          a{border-right: none;}
-        }
-        li {
-          &:hover {
-            ul { margin: 0px; position: absolute;
-              padding: 0px 0 0px 182px;
-              top: 0px;
-              li {display: block;}
-            }
-          }
-          ul {
-            li {display: none;}}
-        }
 
-      }
-      a {background-color: #5794BF; display: flex; border-left: 2px solid black; justify-content:space-around; width: 100%;                 text-decoration: none;  line-height: 35px;  color: black;
-        &:hover { background-color: #0088CC; }
-      }
-    }
-    li:last-child {
-      a {border-right: 2px solid black;}
-    }
-  }
-}
 
 
 
@@ -134,17 +100,25 @@
 
 }
 
+#menue>li:last-child>ul>li>ul {
+  position: absolute;
+  left: -152px;
+  transform-origin: right center;
+}
+
+
+
+
 #menue li ul li ul {
   left:145px;
   top: 0px;
-  transform: scale(0,1) !important;
+  transform: scale(0,1);
   transform-origin: left center;
 }
 #menue li ul li:hover ul {
-  transform: scale(1, 1) !important;
+  transform: scale(1, 1);
   transition-duration: 150ms;
   display: block;
-
 }
 
 #menue li ul{
@@ -160,8 +134,13 @@
   transition-delay: 50ms;
   transform-origin: top center;
   transition-timing-function: ease-in;
-
 }
+
+#menue>li:hover>ul{
+  transform: scale(1, 1);
+  transition-duration: 200ms;
+}
+
 #menue li ul li{
   float: none;
   height: 36px;
@@ -191,14 +170,8 @@
   color:    #000000;
   text-decoration: none;
   border-bottom: 1px solid red;
-
 }
 
-#menue li:hover ul{
-  transform: scale(1, 1);
-  transition-duration: 200ms;
-
-}
 #menue li:hover {
   background: #0088CC;
   &:before {
@@ -211,91 +184,7 @@
     left: 5px;
     position: absolute;
   }
-
 }
-
-
-
-
-
-nav li ul {
-  transition-property: transform;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in;
-  transition-delay: 50ms;
-  transform: scale(1, 0);
-  transform-origin: top center;
-}
-nav li:hover ul {
-  transform: scale(1, 1);
-}
-
-
-
-
-
-
-
-#menua {
-  padding: 0;
-  margin: 0;
-  font-family:  Verdana;
-}
-#menua li {
-  list-style: none;
-  float: left;
-  height: 30px;
-  padding: 0;
-  margin: 0;
-  width: 150px;
-  text-align: center;
-  background:  #95DF8E;
-  position: relative;
-  padding-top: 12px;
-}
-#menua li ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 150px;
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 42px;
-}
-#menua li ul li{
-  float: none;
-  height: 30px;
-  margin: 0;
-  width: 150px;
-  text-align: center;
-  background: #95DF8E;
-}
-#menua li a{
-  display: block;
-  width: 150px;
-  height: 30px;
-  color:    #006A35;
-  text-decoration: none;
-}
-#menua li:hover ul{
-  display: block;
-}
-#menua li:hover{
-  background: #35C835;
-
-}
-#menua li ul li ul{
-  left:150px;
-  top: 0;
-}
-#menua li ul li ul li{display: none;}
-#menua li ul li:hover ul li{display: block;}
-
-
-
-
-
 
 
 
